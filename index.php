@@ -64,8 +64,6 @@
                         <p><?php echo $curHotel['distance_to_center']; ?></p>
                     </article>
                 <?php } ?>
-            <!-- </section> -->
-            <hr>
 
 </body>
 </html>
