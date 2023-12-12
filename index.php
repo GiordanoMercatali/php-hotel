@@ -58,10 +58,18 @@
                         <h2>
                             <?php echo $curHotel['name']; ?>
                         </h2>
-                        <p><?php echo $curHotel['description']; ?></p>
-                        <p><?php echo $curHotel['parking']; ?></p>
-                        <p><?php echo $curHotel['vote']; ?></p>
-                        <p><?php echo $curHotel['distance_to_center']; ?></p>
+                        <p>Description: <?php echo $curHotel['description']; ?></p>
+                        
+                        <p> Parking: 
+                        <?php if ($curHotel['parking']) { ?>
+                            <span>Yes</span>
+                        <?php } else { ?>
+                            <span>No</span>
+                        <?php } ?>
+                        </p>
+
+                        <p>Rating: <?php echo $curHotel['vote']; ?> / 5</p>
+                        <p>Distance from center: <?php echo $curHotel['distance_to_center']; ?> Km</p>
                     </article>
                 <?php } ?>
 
