@@ -47,31 +47,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
     
     
 
-            <?php foreach ($hotels as $curHotel) { ?>
-                    <article>
-                        <h2>
-                            <?php echo $curHotel['name']; ?>
-                        </h2>
-                        <p>Description: <?php echo $curHotel['description']; ?></p>
-                        
-                        <p> Parking: 
-                        <?php if ($curHotel['parking']) { ?>
-                            <span>Yes</span>
-                        <?php } else { ?>
-                            <span>No</span>
-                        <?php } ?>
-                        </p>
+            <div class="">
 
-                        <p>Rating: <?php echo $curHotel['vote']; ?> / 5</p>
-                        <p>Distance from center: <?php echo $curHotel['distance_to_center']; ?> Km</p>
-                    </article>
+            <?php foreach ($hotels as $curHotel) { ?>
+                    <div class="row my-0 mx-auto">
+                        <div class="col-2 border d-flex align-items-center justify-content-center">
+                            <h2>
+                                <?php echo $curHotel['name']; ?>
+                            </h2>
+                        </div>
+                        
+                        <div class="col-2 border d-flex align-items-center justify-content-center">
+                            <p><?php echo $curHotel['description']; ?></p>
+                        </div>
+                        
+                        <div class="col-2 border d-flex align-items-center justify-content-center">
+                            <?php if ($curHotel['parking']) { ?>
+                                <p>Yes</p>
+                            <?php } else { ?>
+                                <p>No</p>
+                            <?php } ?>
+                        </div>
+
+                        <div class="col-2 border d-flex align-items-center justify-content-center">
+                            <p><?php echo $curHotel['vote']; ?> / 5</p>
+                        </div>
+
+                        <div class="col-2 border d-flex align-items-center justify-content-center">
+                            <p><?php echo $curHotel['distance_to_center']; ?> Km</p>
+                        </div>
+
+                    </div>
                 <?php } ?>
+
+            
 
 </body>
 </html>
